@@ -32,7 +32,8 @@ public class SpringDataRedisApplication {
 		return productDao.findProductById(id);
 	}
 
-	@DeleteMapping("{/id}")
+
+	@PostMapping("delete/{id}")
 	public String  removeProduct(@PathVariable int id) {
 		return productDao.deleteProduct(id);
 	}
